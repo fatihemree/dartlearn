@@ -1,28 +1,26 @@
 
 # 1. Dart Learn 101
-<!-- TOC -->
+- [1. Dart Learn 101](#1-dart-learn-101)
+  * [1.1. Print](#11-print)
+  * [1.2. Variable](#12-variable)
+    + [1.2.1. String](#121-string)
+    + [1.2.2. Final & Const (Değişmez Değer)](#122-final---const--de-i-mez-de-er-)
+  * [1.3. if else](#13-if-else)
+    + [1.3.1. Ternary Soru isareti kosulu](#131-ternary-soru-isareti-kosulu)
+      - [1.3.1.1. Null degeri kontrol etme kosulu](#1311-null-degeri-kontrol-etme-kosulu)
+  * [1.4. Switch](#14-switch)
+  * [1.5. Döngüler For While DoWhile](#15-d-ng-ler-for-while-dowhile)
+    + [1.5.1. For](#151-for)
+    + [1.5.2. While](#152-while)
+    + [1.5.3. Break Continue](#153-break-continue)
+  * [1.6. Fonksiyonlar](#16-fonksiyonlar)
+    + [1.6.1. Fat Arrow](#161-fat-arrow)
+    + [1.6.2. Opsiyonel ve isimlendirilmis parametreler](#162-opsiyonel-ve-isimlendirilmis-parametreler)
+      - [1.6.2.1. koseli parantez](#1621-koseli-parantez)
+      - [1.6.2.2. suslu parantez](#1622-suslu-parantez)
+      - [1.6.2.3. Null degere karsilik deger atama](#1623-null-degere-karsilik-deger-atama)
 
-- [Dart Learn 101](#dart-learn-101)
-    - [Print](#print)
-    - [Variable](#variable)
-        - [String](#string)
-        - [Final & Const (Değişmez Değer)](#final--const-değişmez-değer)
-    - [if else](#if-else)
-        - [Ternary Soru isareti kosulu](#ternary-soru-isareti-kosulu)
-            - [Null degeri kontrol etme kosulu](#null-degeri-kontrol-etme-kosulu)
-    - [Switch](#switch)
-    - [Döngüler For While DoWhile](#döngüler-for-while-dowhile)
-        - [For](#for)
-        - [While](#while)
-        - [Break Continue](#break-continue)
-    - [Fonksiyonlar](#fonksiyonlar)
-        - [Fat Arrow](#fat-arrow)
-        - [Opsiyonel ve isimlendirilmis parametreler](#opsiyonel-ve-isimlendirilmis-parametreler)
-            - [koseli parantez](#koseli-parantez)
-            - [suslu parantez](#suslu-parantez)
-            - [Null degere karsilik deger atama](#null-degere-karsilik-deger-atama)
 
-<!-- /TOC -->
 
 ## 1.1. Print
 ```dart
