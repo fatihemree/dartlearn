@@ -1,6 +1,9 @@
 main(List<String> args) {
-print("Toplam: "+ topla(5,20).toString());  
+deger(10); 
 }
-int topla (int bir , int iki)=> bir+iki;
+void deger (int sayi, {String  name="emre",bool bayrak})
+{
+print("$sayi  $name  $bayrak");
+}
 
 

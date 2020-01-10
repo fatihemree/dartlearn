@@ -1,11 +1,30 @@
-# Dart Learn 101
 
-1. [print()](#print)
-1. [variable](#variable)
-1. [Final & Const](#Final-&-Const-(Değişmez-Değer))
+# 1. Dart Learn 101
+<!-- TOC -->
 
+- [Dart Learn 101](#dart-learn-101)
+    - [Print](#print)
+    - [Variable](#variable)
+        - [String](#string)
+        - [Final & Const (Değişmez Değer)](#final--const-değişmez-değer)
+    - [if else](#if-else)
+        - [Ternary Soru isareti kosulu](#ternary-soru-isareti-kosulu)
+            - [Null degeri kontrol etme kosulu](#null-degeri-kontrol-etme-kosulu)
+    - [Switch](#switch)
+    - [Döngüler For While DoWhile](#döngüler-for-while-dowhile)
+        - [For](#for)
+        - [While](#while)
+        - [Break Continue](#break-continue)
+    - [Fonksiyonlar](#fonksiyonlar)
+        - [Fat Arrow](#fat-arrow)
+        - [Opsiyonel ve isimlendirilmis parametreler](#opsiyonel-ve-isimlendirilmis-parametreler)
+            - [koseli parantez](#koseli-parantez)
+            - [suslu parantez](#suslu-parantez)
+            - [Null degere karsilik deger atama](#null-degere-karsilik-deger-atama)
 
-## print
+<!-- /TOC -->
+
+## 1.1. Print
 ```dart
   print('tırnak\'lar ayrıldığında');
   print(8*4);
@@ -16,7 +35,8 @@
   //fatihemre
   //fatihemre
 ```
-## Variable 
+
+## 1.2. Variable 
 - number, double, int  
 - String
 - boolen
@@ -27,7 +47,7 @@
 - Var (değerin durumuna göre kendi tanımlama yapar)
 > Not: Tüm değişkenler object kabul edilir boş kalan tüm değerler "null" değeri alır. Kullanırken dikkat edilmelidir.
 
-### String
+### 1.2.1. String
 ```dart
 String name= "fatih";
 String lastName= "emre";
@@ -49,21 +69,23 @@ print("sayıların çarpımı: ${x*y}");
 
 //Print: String başladığı için her şey string olması gerekir .toString();
 ```
-### Final & Const (Değişmez Değer)
+
+### 1.2.2. Final & Const (Değişmez Değer)
 > **Final**: Kullanılmadıkça bellekte yer tutmaz. Türü isteğe bağlı<br> **Const**: Her daim yer tutar. **İnstance ise:** *****static const***** olarak kullanılır.
 
-### İF-ELSE (Koşul)
+## 1.3. if else
 
 > && : **VE**<br><br>&nbsp;||&nbsp;&nbsp;&nbsp; :**VEYA**<br><br>&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp; : **DEĞİL**
 
-#### Ternary (? Koşulu)
+### 1.3.1. Ternary Soru isareti kosulu
 
 ```dart
 var x=10,y=30, z;
 z= (x>y) ? "dogru" : "yanlış" ;
 //yanlış
 ```
-#### Null Değeri Kontrol (??)
+
+#### 1.3.1.1. Null degeri kontrol etme kosulu
 > İlk dolu olan içeriği değişkene atıyor.
 ```dart
 var x,y="dolu değer", z;
@@ -72,7 +94,7 @@ z= x ?? y;
 //dolu değer
 ```
 
-#### Switch
+## 1.4. Switch
 >Belli bir aralıktan oluşan koşullar için kullanışlı olabilir.
 ```dart
 switch (degişken) {
@@ -86,9 +108,10 @@ switch (degişken) {
     //add ...
 }
 ```
-### Döngüler For While DoWhile
 
-#### For
+## 1.5. Döngüler For While DoWhile
+
+### 1.5.1. For
 ```dart
 for (var i = 0; i < 10; i++) {
   print(i);
@@ -99,7 +122,8 @@ for (var name in isimler) {
   print(name);
 }
 ```
-#### While
+
+### 1.5.2. While
 
 ```dart
 while (koşul) {
@@ -111,7 +135,8 @@ do {
   //...
 } while (koşul);
 ```
-#### Break & Continue
+
+### 1.5.3. Break Continue
 
 ```dart
 for (var i = 0; i < 10; i++) {
@@ -156,7 +181,8 @@ for (var i = 0; i < 10; i++) {
 //i değeri: 4
 //Durdu: 5
 ```
-### Fonksiyonlar
+
+## 1.6. Fonksiyonlar
 
 ```dart
 main(List<String> args) {
@@ -168,7 +194,8 @@ int carp (int bir , int iki)
 }
 //50
 ```
-#### Fat Arrow
+
+### 1.6.1. Fat Arrow
 > => değeriyle kullanılarak açılır. <br> **Asla süslü parantez almaz. Tek satır yazılır.**
 
 ```dart
@@ -179,7 +206,51 @@ print("Toplam: "+ topla(5,20).toString());
 int topla (int bir , int iki)=> bir+iki;
 //25
 ```
-#### Opsiyonel ve İsimlendirilmiş Parametreler
+
+### 1.6.2. Opsiyonel ve isimlendirilmis parametreler
+> Fonksiyona alınan parametrelerin ecma script benzer özellikle bir esnekliğe hakim. Boş girilen parametreler **"NULL"** degeri döndürür.<br> 
+>- **"[int x ,string y]"** köşeli parentez <br>parantez içerisinde yer alan değer girilmesede fonksiyon çalışır.<br><br> 
+>- **"{int x ,string y}"** süslü parantez <br>  parantez içerisinde yer alan parametrelerin sırası önemli olmamak kaydıyla değer kabul eder: **(parametre:value)** <br> <br>
+>- **(int x=5,string="name")** koşula göre atanan değer
+
+#### 1.6.2.1. koseli parantez
+```dart
+main(List<String> args) {
+deger(50); 
+}
+void deger (int sayi, [String  name,bool bayrak])
+{
+print("$sayi  $name  $bayrak");
+}
+//50  null  null
+//50  fatih  null
+```
+
+#### 1.6.2.2. suslu parantez
+```dart
+main(List<String> args) {
+deger(50,name:"fatih",bayrak:false); 
+}
+void deger (int sayi, {String  name,bool bayrak})
+{
+print("$sayi  $name  $bayrak");
+}
+//50  fatih  false
+```
+
+#### 1.6.2.3. Null degere karsilik deger atama
+```dart
+main(List<String> args) {
+deger(50); 
+}
+void deger (int sayi, [String  name="emre",bool bayrak])
+{
+print("$sayi  $name  $bayrak");
+}
+//50  emre  null
+//Koşul ataması için köşeli ya da süslü par. içinde olmalı.
+```
+
 
 
 
