@@ -1,28 +1,41 @@
 
-# 1. Dart Learn 101
-- [1. Dart Learn 101](#1-dart-learn-101)
-  * [1.1. Print](#11-print)
-  * [1.2. Variable](#12-variable)
-    + [1.2.1. String](#121-string)
-    + [1.2.2. Final & Const (Değişmez Değer)](#122-final---const--de-i-mez-de-er-)
-  * [1.3. if else](#13-if-else)
-    + [1.3.1. Ternary Soru isareti kosulu](#131-ternary-soru-isareti-kosulu)
-      - [1.3.1.1. Null degeri kontrol etme kosulu](#1311-null-degeri-kontrol-etme-kosulu)
-  * [1.4. Switch](#14-switch)
-  * [1.5. Döngüler For While DoWhile](#15-d-ng-ler-for-while-dowhile)
-    + [1.5.1. For](#151-for)
-    + [1.5.2. While](#152-while)
-    + [1.5.3. Break Continue](#153-break-continue)
-  * [1.6. Fonksiyonlar](#16-fonksiyonlar)
-    + [1.6.1. Fat Arrow](#161-fat-arrow)
-    + [1.6.2. Opsiyonel ve isimlendirilmis parametreler](#162-opsiyonel-ve-isimlendirilmis-parametreler)
-      - [1.6.2.1. koseli parantez](#1621-koseli-parantez)
-      - [1.6.2.2. suslu parantez](#1622-suslu-parantez)
-      - [1.6.2.3. Null degere karsilik deger atama](#1623-null-degere-karsilik-deger-atama)
+# Dart Learn 101
 
 
 
-## 1.1. Print
+<!-- TOC updateonsave:undefined -->
+
+- [Dart Learn 101](#dart-learn-101)
+    - [Print](#print)
+    - [Variable](#variable)
+        - [String](#string)
+        - [Final Const Degismez Deger](#final-const-degismez-deger)
+    - [if else](#if-else)
+        - [Ternary Soru isareti kosulu](#ternary-soru-isareti-kosulu)
+            - [Null degeri kontrol etme kosulu](#null-degeri-kontrol-etme-kosulu)
+    - [Switch](#switch)
+    - [Döngüler For While DoWhile](#döngüler-for-while-dowhile)
+        - [For](#for)
+        - [While](#while)
+        - [Break Continue](#break-continue)
+    - [Fonksiyonlar](#fonksiyonlar)
+        - [Fat Arrow](#fat-arrow)
+        - [Opsiyonel ve isimlendirilmis parametreler](#opsiyonel-ve-isimlendirilmis-parametreler)
+            - [koseli parantez](#koseli-parantez)
+            - [suslu parantez](#suslu-parantez)
+            - [Null degere karsilik deger atama](#null-degere-karsilik-deger-atama)
+    - [exception try catch finalyy tilda](#exception-try-catch-finalyy-tilda)
+    
+    - [Array Listler](#array-listler)
+        - [Set yapisi](#set-yapisi)
+        - [map yapisi](#map-yapisi)
+        
+
+<!-- /TOC -->
+
+
+
+## Print
 ```dart
   print('tırnak\'lar ayrıldığında');
   print(8*4);
@@ -34,7 +47,7 @@
   //fatihemre
 ```
 
-## 1.2. Variable 
+## Variable 
 - number, double, int  
 - String
 - boolen
@@ -45,7 +58,7 @@
 - Var (değerin durumuna göre kendi tanımlama yapar)
 > Not: Tüm değişkenler object kabul edilir boş kalan tüm değerler "null" değeri alır. Kullanırken dikkat edilmelidir.
 
-### 1.2.1. String
+### String
 ```dart
 String name= "fatih";
 String lastName= "emre";
@@ -68,14 +81,14 @@ print("sayıların çarpımı: ${x*y}");
 //Print: String başladığı için her şey string olması gerekir .toString();
 ```
 
-### 1.2.2. Final & Const (Değişmez Değer)
+### Final Const Degismez Deger
 > **Final**: Kullanılmadıkça bellekte yer tutmaz. Türü isteğe bağlı<br> **Const**: Her daim yer tutar. **İnstance ise:** *****static const***** olarak kullanılır.
 
-## 1.3. if else
+## if else
 
 > && : **VE**<br><br>&nbsp;||&nbsp;&nbsp;&nbsp; :**VEYA**<br><br>&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp; : **DEĞİL**
 
-### 1.3.1. Ternary Soru isareti kosulu
+### Ternary Soru isareti kosulu
 
 ```dart
 var x=10,y=30, z;
@@ -83,7 +96,7 @@ z= (x>y) ? "dogru" : "yanlış" ;
 //yanlış
 ```
 
-#### 1.3.1.1. Null degeri kontrol etme kosulu
+#### Null degeri kontrol etme kosulu
 > İlk dolu olan içeriği değişkene atıyor.
 ```dart
 var x,y="dolu değer", z;
@@ -92,7 +105,7 @@ z= x ?? y;
 //dolu değer
 ```
 
-## 1.4. Switch
+## Switch
 >Belli bir aralıktan oluşan koşullar için kullanışlı olabilir.
 ```dart
 switch (degişken) {
@@ -107,9 +120,9 @@ switch (degişken) {
 }
 ```
 
-## 1.5. Döngüler For While DoWhile
+## Döngüler For While DoWhile
 
-### 1.5.1. For
+### For
 ```dart
 for (var i = 0; i < 10; i++) {
   print(i);
@@ -121,7 +134,7 @@ for (var name in isimler) {
 }
 ```
 
-### 1.5.2. While
+### While
 
 ```dart
 while (koşul) {
@@ -134,7 +147,7 @@ do {
 } while (koşul);
 ```
 
-### 1.5.3. Break Continue
+### Break Continue
 
 ```dart
 for (var i = 0; i < 10; i++) {
@@ -180,7 +193,7 @@ for (var i = 0; i < 10; i++) {
 //Durdu: 5
 ```
 
-## 1.6. Fonksiyonlar
+## Fonksiyonlar
 
 ```dart
 main(List<String> args) {
@@ -193,7 +206,7 @@ int carp (int bir , int iki)
 //50
 ```
 
-### 1.6.1. Fat Arrow
+### Fat Arrow
 > => değeriyle kullanılarak açılır. <br> **Asla süslü parantez almaz. Tek satır yazılır.**
 
 ```dart
@@ -205,13 +218,13 @@ int topla (int bir , int iki)=> bir+iki;
 //25
 ```
 
-### 1.6.2. Opsiyonel ve isimlendirilmis parametreler
+### Opsiyonel ve isimlendirilmis parametreler
 > Fonksiyona alınan parametrelerin ecma script benzer özellikle bir esnekliğe hakim. Boş girilen parametreler **"NULL"** degeri döndürür.<br> 
 >- **"[int x ,string y]"** köşeli parentez <br>parantez içerisinde yer alan değer girilmesede fonksiyon çalışır.<br><br> 
 >- **"{int x ,string y}"** süslü parantez <br>  parantez içerisinde yer alan parametrelerin sırası önemli olmamak kaydıyla değer kabul eder: **(parametre:value)** <br> <br>
 >- **(int x=5,string="name")** koşula göre atanan değer
 
-#### 1.6.2.1. koseli parantez
+#### koseli parantez
 ```dart
 main(List<String> args) {
 deger(50); 
@@ -224,7 +237,7 @@ print("$sayi  $name  $bayrak");
 //50  fatih  null
 ```
 
-#### 1.6.2.2. suslu parantez
+#### suslu parantez
 ```dart
 main(List<String> args) {
 deger(50,name:"fatih",bayrak:false); 
@@ -236,7 +249,7 @@ print("$sayi  $name  $bayrak");
 //50  fatih  false
 ```
 
-#### 1.6.2.3. Null degere karsilik deger atama
+#### Null degere karsilik deger atama
 ```dart
 main(List<String> args) {
 deger(50); 
@@ -248,7 +261,137 @@ print("$sayi  $name  $bayrak");
 //50  emre  null
 //Koşul ataması için köşeli ya da süslü par. içinde olmalı.
 ```
+## exception try catch finalyy tilda
+
+ >İlerleyen zamanlarda kendi hata mesajları oluşturabilirsin.
+ 
+> **try:** hata vermesi olası olan yapılarda kullanılır.<br>
+**catch:** hata durumunda çalışan kısım genelde hata mesajı döndürülür.<br>
+**finally:** hata olsun olmasın her daim çalışan kod bloğu.<br>
+**tilda (~):** bazı hataları geçici bir şekilde engeller. <br>
+**catch(e,stash):**<br> e: normal hatayı. <br>stash: detaylı hata sıra dizisini gösterir.
+```dart
+try {
+  int sonuc= 12~/0;
+  print(sonuc);
+} catch (e,stash) {
+  print("Hata: $e  $stash");
+}
+//Hata: IntegerDivisionByZeroException  #0   //   int.~/  (dart:core-patch///integers.dart:24:7)
+//#1      main 
+//variable.dart:5
+//#2      _startIsolate.<anonymous closure>  //(dart:isolate-patch///isolate_patch.dart:305:32)
+//#3      _RawReceivePortImpl._handleMessage // (dart:isolate-patch///isolate_patch.dart:174:12)
+```
+
+```dart
+try {
+  int sonuc= 12~/0;
+  print(sonuc);
+} catch (e,stash) {
+  print("Hata: $e : $stash");
+}
+finally{
+  print("her zaman çalışır");
+}
+//Hata: IntegerDivisionByZeroException : #0  //    int.~/  (dart:core-patch///integers.dart:24:7)
+//#1      main 
+//variable.dart:5
+//#2      _startIsolate.<anonymous closure>  //(dart:isolate-patch///isolate_patch.dart:305:32)
+//#3      _RawReceivePortImpl._handleMessage // (dart:isolate-patch///isolate_patch.dart:174:12)
+
+//her zaman çalışır --FİNALLY
+```
+
+## Array Listler
+
+> Arraylar iki türe ayrılır <br>
+Sabit listeler ve Büyüyen listeler.
+Büyüyen listeler veri eklemek sabit listelere göre biraz farklıdır. Verileri tanımlayabilmemiz için bazı methodlar kullanmamız gerekiyor bunlar.
+>- **clear** : ne var ne yok temizler.
+>- **remove**: verilen elamanı siler.
+>- **removeAt** : belirtilen index verisini siler. <br>
+>örneklerle bunları çoğaltabiliriz...
+
+```dart
+//Listlerin türleri belirtilerek oluşturulur.
+List<int> sayilarSabit= List(5);
+List<int> sayilarDinamik= List();
+for (var sayi in sayilarSabit) {
+  print(sayi);
+}
+//lambda
+sayilarDinamik.forEach( (sayi)=> print(sayi) );
+
+List <String> sehir = ["Denizli","Aydın","Muğla"];
+sehir.add("Adana");
+sehir.add("Ankara");
+for (var il in sehir) {
+  print(il);
+}
+//Denizli
+//Aydın
+//Muğla
+//Adana
+//Ankara
+```
+
+### Set yapisi
+
+>List en önemli farkı birden çok aynı veriyi bir kere alması ve düzensiz sıralama yapması index yapısı olmadığı için. <br> Verilerin kontrolünü **contains** ile sağlanıyor.
+
+```dart
+Set<String> isim = Set();
+isim.add("fatih");
+isim.add("fatih");
+isim.add("emre");
+isim.add("emre");
+
+isim.forEach((name)=>print(name));
+//Listlerin bu türleri true false döndürebilir.
+if(isim.contains("emre"))
+print("vardır");
+//fatih
+//emre
+//vardır
+Set<int> numara= Set.from([1,2,3,4]);
+print(numara);
+//{1, 2, 3, 4}
+
+//addAll herhangi liste içeriğini başka listeye eklemesini sağlar.
+Set<int> rakam= Set();
+rakam.addAll(numara);
+print(rakam);
+```
+### map yapisi
+
+> Yapı olarak set dizisiyle çok benzer yanları vardır. Fakat map ayıran özellik ise değerleri <br> **key:value**<br>olarak tutmasından geliyor. burası objede olabilir .json gibide düşünülebilir.
+
+```dart
+Map<String,Object>  kisi = Map();
+kisi["ad"]="fatih";
+kisi["yas"]=25;
+kisi["erkemi"]=false;
+for (var deger in kisi.values) {
+  print(deger);
+}
+//fatih
+//25
+//false
+for (var keys in kisi.keys)
+print(keys);
+//ad
+//yas
+//erkemi
+
+// güncelleme nasıl yapılır.
+kisi.update("ad",(value)=>"hasan");
+print(kisi["ad"]);
+//Hasan
+```
 
 
 
 
+
+### fafafaf
