@@ -469,7 +469,7 @@ print(ybs.ortalama);
 double get ortalama => (this.vizeNot*0.4)+(this.finalNot*0.6);
 //30.4
 ```
-#### private deger
+#### 1.9.2.1. private deger
 > classlara tanımalanan değişkenlerin dışardan ulaşılmasını engellemel amaçlı kullanılır.
 
 ```dart
