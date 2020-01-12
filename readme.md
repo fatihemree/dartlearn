@@ -1,4 +1,6 @@
 
+![dartLogo](img/dartLogo.png)
+
 # 1. Dart Learn 101
 
 <!-- TOC orderedlist:true -->
