@@ -1,40 +1,12 @@
 
 ![dartLogo](img/dartLogo.png)
 
-# 1. Dart Learn 101
+# Dart Learn 101
 
-<!-- TOC orderedlist:true -->
+[[TOC]]
 
-- [1. Dart Learn 101](#1-dart-learn-101)
-    - [1.1. Print](#11-print)
-    - [1.2. Variable](#12-variable)
-        - [1.2.1. String](#121-string)
-        - [1.2.2. Final Const Degismez Deger](#122-final-const-degismez-deger)
-    - [1.3. if else](#13-if-else)
-        - [1.3.1. Ternary Soru isareti kosulu](#131-ternary-soru-isareti-kosulu)
-            - [1.3.1.1. Null degeri kontrol etme kosulu](#1311-null-degeri-kontrol-etme-kosulu)
-    - [1.4. Switch](#14-switch)
-    - [1.5. Döngüler For While DoWhile](#15-döngüler-for-while-dowhile)
-        - [1.5.1. For](#151-for)
-        - [1.5.2. While](#152-while)
-        - [1.5.3. Break Continue](#153-break-continue)
-    - [1.6. Fonksiyonlar](#16-fonksiyonlar)
-        - [1.6.1. Fat Arrow](#161-fat-arrow)
-        - [1.6.2. Opsiyonel ve isimlendirilmis parametreler](#162-opsiyonel-ve-isimlendirilmis-parametreler)
-            - [1.6.2.1. koseli parantez](#1621-koseli-parantez)
-            - [1.6.2.2. suslu parantez](#1622-suslu-parantez)
-            - [1.6.2.3. Null degere karsilik deger atama](#1623-null-degere-karsilik-deger-atama)
-    - [1.7. exception try catch finalyy tilda](#17-exception-try-catch-finalyy-tilda)
-    - [1.8. Array Listler](#18-array-listler)
-        - [1.8.1. Set yapisi](#181-set-yapisi)
-        - [1.8.2. map yapisi](#182-map-yapisi)
-    - [1.9. Siniflar ve Nesne Kavramlari](#19-siniflar-ve-nesne-kavramlari)
-        - [1.9.1. Consructor Kurucu methodlar](#191-consructor-kurucu-methodlar)
-        - [1.9.2. getter setter private deger](#192-getter-setter-private-deger)
 
-<!-- /TOC -->
-
-## 1.1. Print
+## Print
 ```dart
   print('tırnak\'lar ayrıldığında');
   print(8*4);
@@ -46,7 +18,7 @@
   //fatihemre
 ```
 
-## 1.2. Variable 
+## Variable 
 - number, double, int  
 - String
 - boolen
@@ -57,7 +29,7 @@
 - Var (değerin durumuna göre kendi tanımlama yapar)
 > Not: Tüm değişkenler object kabul edilir boş kalan tüm değerler "null" değeri alır. Kullanırken dikkat edilmelidir.
 
-### 1.2.1. String
+### String
 ```dart
 String name= "fatih";
 String lastName= "emre";
@@ -80,14 +52,14 @@ print("sayıların çarpımı: ${x*y}");
 //Print: String başladığı için her şey string olması gerekir .toString();
 ```
 
-### 1.2.2. Final Const Degismez Deger
+### Final Const Degismez Deger
 > **Final**: Kullanılmadıkça bellekte yer tutmaz. Türü isteğe bağlı<br> **Const**: Her daim yer tutar. **İnstance ise:** *****static const***** olarak kullanılır.
 
-## 1.3. if else
+## if else
 
 > && : **VE**<br><br>&nbsp;||&nbsp;&nbsp;&nbsp; :**VEYA**<br><br>&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp; : **DEĞİL**
 
-### 1.3.1. Ternary Soru isareti kosulu
+### Ternary Soru isareti kosulu
 
 ```dart
 var x=10,y=30, z;
@@ -95,7 +67,7 @@ z= (x>y) ? "dogru" : "yanlış" ;
 //yanlış
 ```
 
-#### 1.3.1.1. Null degeri kontrol etme kosulu
+#### Null degeri kontrol etme kosulu
 > İlk dolu olan içeriği değişkene atıyor.
 ```dart
 var x,y="dolu değer", z;
@@ -104,7 +76,7 @@ z= x ?? y;
 //dolu değer
 ```
 
-## 1.4. Switch
+## Switch
 >Belli bir aralıktan oluşan koşullar için kullanışlı olabilir.
 ```dart
 switch (degişken) {
@@ -119,9 +91,9 @@ switch (degişken) {
 }
 ```
 
-## 1.5. Döngüler For While DoWhile
+## Döngüler For While DoWhile
 
-### 1.5.1. For
+### For
 ```dart
 for (var i = 0; i < 10; i++) {
   print(i);
@@ -133,7 +105,7 @@ for (var name in isimler) {
 }
 ```
 
-### 1.5.2. While
+### While
 
 ```dart
 while (koşul) {
@@ -146,7 +118,7 @@ do {
 } while (koşul);
 ```
 
-### 1.5.3. Break Continue
+### Break Continue
 
 ```dart
 for (var i = 0; i < 10; i++) {
@@ -192,7 +164,7 @@ for (var i = 0; i < 10; i++) {
 //Durdu: 5
 ```
 
-## 1.6. Fonksiyonlar
+## Fonksiyonlar
 
 ```dart
 main(List<String> args) {
@@ -205,7 +177,7 @@ int carp (int bir , int iki)
 //50
 ```
 
-### 1.6.1. Fat Arrow
+### Fat Arrow
 > => değeriyle kullanılarak açılır. <br> **Asla süslü parantez almaz. Tek satır yazılır.**
 
 ```dart
@@ -217,13 +189,13 @@ int topla (int bir , int iki)=> bir+iki;
 //25
 ```
 
-### 1.6.2. Opsiyonel ve isimlendirilmis parametreler
+### Opsiyonel ve isimlendirilmis parametreler
 > Fonksiyona alınan parametrelerin ecma script benzer özellikle bir esnekliğe hakim. Boş girilen parametreler **"NULL"** degeri döndürür.<br> 
 >- **"[int x ,string y]"** köşeli parentez <br>parantez içerisinde yer alan değer girilmesede fonksiyon çalışır.<br><br> 
 >- **"{int x ,string y}"** süslü parantez <br>  parantez içerisinde yer alan parametrelerin sırası önemli olmamak kaydıyla değer kabul eder: **(parametre:value)** <br> <br>
 >- **(int x=5,string="name")** koşula göre atanan değer
 
-#### 1.6.2.1. koseli parantez
+#### koseli parantez
 ```dart
 main(List<String> args) {
 deger(50); 
@@ -236,7 +208,7 @@ print("$sayi  $name  $bayrak");
 //50  fatih  null
 ```
 
-#### 1.6.2.2. suslu parantez
+#### suslu parantez
 ```dart
 main(List<String> args) {
 deger(50,name:"fatih",bayrak:false); 
@@ -248,7 +220,7 @@ print("$sayi  $name  $bayrak");
 //50  fatih  false
 ```
 
-#### 1.6.2.3. Null degere karsilik deger atama
+#### Null degere karsilik deger atama
 ```dart
 main(List<String> args) {
 deger(50); 
@@ -261,7 +233,7 @@ print("$sayi  $name  $bayrak");
 //Koşul ataması için köşeli ya da süslü par. içinde olmalı.
 ```
 
-## 1.7. exception try catch finalyy tilda
+## exception try catch finalyy tilda
 
  >İlerleyen zamanlarda kendi hata mesajları oluşturabilirsin.
  
@@ -303,7 +275,7 @@ finally{
 //her zaman çalışır --FİNALLY
 ```
 
-## 1.8. Array Listler
+## Array Listler
 
 > Arraylar iki türe ayrılır <br>
 Sabit listeler ve Büyüyen listeler.
@@ -336,7 +308,7 @@ for (var il in sehir) {
 //Ankara
 ```
 
-### 1.8.1. Set yapisi
+### Set yapisi
 
 >List en önemli farkı birden çok aynı veriyi bir kere alması ve düzensiz sıralama yapması index yapısı olmadığı için. <br> Verilerin kontrolünü **contains** ile sağlanıyor.
 
@@ -364,7 +336,7 @@ rakam.addAll(numara);
 print(rakam);
 ```
 
-### 1.8.2. map yapisi
+### map yapisi
 
 > Yapı olarak set dizisiyle çok benzer yanları vardır. Fakat map ayıran özellik ise değerleri <br> **key:value**<br>olarak tutmasından geliyor. burası objede olabilir .json gibide düşünülebilir.
 
@@ -395,7 +367,7 @@ print(kisi["ad"]);
 
 
 
-## 1.9. Siniflar ve Nesne Kavramlari
+## Siniflar ve Nesne Kavramlari
 >Sınıflar ve nesneler(İnstance) kullanım alanları genelde belirlenen yapıların sürekli tekrarlarından kurtarmak için kullanılır bu gibi yapıların içlerine sadece değişken taşımamakla birlikte fonksiyonlarıda barındırabilir yani eylemleride içlerinde barındırır.
 
 ```dart
@@ -430,7 +402,7 @@ class Ogrenci {
 //Name: fatih
 ```
 
-### 1.9.1. Consructor Kurucu methodlar
+### Consructor Kurucu methodlar
 
 >classın barındırdığı değişkenlere dışardan daha düzenli bir veri gönderilmesini sağlar.
 
@@ -450,7 +422,7 @@ class Ogrenci {
  Ogrenci ybs = Ogrenci("fatih",50,50,true);
 ```
 
-### 1.9.2. getter setter private deger
+### getter setter private deger
 >bu türler class tanımlamalarımızı çıkabilecek hatalara ve tehlikelere önlem almamıza yarıyor.<br>
 **gettter**: bu deger instance istenilen degerleri kontrollü şekilde döndürmesini sağlar.<br>
 **setter**: instance dışardan gelen değerlere karşı hata oluşturmasına karşı önlem alınması için kullanılır.
@@ -471,7 +443,8 @@ print(ybs.ortalama);
 double get ortalama => (this.vizeNot*0.4)+(this.finalNot*0.6);
 //30.4
 ```
-#### 1.9.2.1. private deger
+#### private deger
+
 > classlara tanımalanan değişkenlerin dışardan ulaşılmasını engellemel amaçlı kullanılır.
 
 ```dart
@@ -479,3 +452,92 @@ int ad;
 
 int _soyad; // bu şekilde kullanılan değişkenler dışarıdan ulaşılamazlar.
 ```
+##  Kalıtım ve Poliforfizm nedir
+
+>Kalıtım yapısı mantığı biyoloji tanımıyla birebir uyuşmaktadır. Tercih edilen kullanım  yöntemi ise daha çok bir birlerine benziyen instance yapılarının ortak özelliğini bir araya toplayan bir sınıf oluşturulur ve kullanılmak istenen instance nesnelerine bağlanır **"extend"** yapısıyla bağlanır. Poliforfizm ise bu kelime anlamında çok çeşitlilik anlamını taşıdığından bu kalıtım özelliklerini nasıl kullanıldığını ele alır.
+
+![kalitim](img/kalitim.jpg)
+
+```dart
+main(List<String> args) {
+ var karabas=Kopek();
+ karabas.sesler();
+ //yemek ye metodu Hayvan Class miras aldı.
+ karabas.yemekYe();
+
+}
+class Hayvan {
+  void yemekYe(){
+    print("yemek yiyor");
+  }
+}
+class Kopek extends Hayvan {
+   void sesler(){
+    print("hav hav");
+  }
+```
+### Method Override
+
+> Overriding kullanılan yerlerde üst sınıftan methods almış demektir fakat burdaki yöntem ise aynı isme sahip fonksiyonda class içerisinde kendimize göre yapılandırabilmemizi sağlarız. <br
+> **super** adında bir anahtar kelimemiz var bu ise üst sınıftaki methodu tekrar çalıştırmamıza yarıyor.<br> Miras alınan sınıfın methodlarının üzerine yazmak olarak bilinir.
+
+
+```dart
+//main class
+var tekir = Kedi();
+tekir.yemekYe();
+class Hayvan {
+  void yemekYe(){
+    print("yemek yiyor");
+  }
+}
+class Kedi extends Hayvan{
+  void sesler(){
+    print("meow");
+  }
+
+  @override
+  void yemekYe() {
+    print("kedi besin alıyor");
+    //super anahtar kelimesi silinirse sadece fonksiyon içerisindekiler derlenir.
+    super.yemekYe();
+  }
+}
+//kedi besin alıyor
+//yemek yiyor
+
+//super silinirse beklenen çıktı:
+//kedi besin alıyor
+```
+
+### Late Binding gec baglama
+
+> Bu kavramları daha iyi tanıyabilmemiz için nesneye yönelik proğ. nasıl çalıştığı bilmemiz lazım nesneye yönelik proğ. object oriented bir dil özelliği taşır yani kısaca kodlar derlenene kadar kodda yazılanları kimse bilmez bu sebebi ise object içinde her şeyi tutabilmesinden kaynaklıdır. Daha kalite kod yazabilmemiz açısından binding kavramları gelişmiştir iki türü vardır erken ve geç bağlama bunları bir adres gibi düşünebliriz derleyici derlenemeden önce neyi derleyeceğini bildiğinden bu bize hız kazandırır. 
+
+```dart
+class Hayvan {
+  void yemekYe(){
+    print("yemek yiyor");
+  }
+  void yemekYe(){
+    print("yemek yiyor");
+  }
+}
+void canli(Hayvan alive) {
+alive.yemekYe();
+alive.uyuyor();
+}
+class Kedi extends Hayvan{
+  void sesler(){
+    print("meow");
+  }
+  @override
+  void yemekYe() {
+    print("kedi besin alıyor");
+    
+  }
+}
+// kedi besin alıyor
+// Dinleniyor
+```
+
