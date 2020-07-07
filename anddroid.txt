@@ -1,0 +1,11 @@
+gradle.properties
+
+android.useAndroidX=true
+android.enableJetifier=true   
+
+
+android {
+    compileSdkVersion 28 
+
+
+
